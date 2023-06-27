@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.use('/', (req, res) => {
+    res.send('HELLO WORLD')
+})
 app.use('/api', routes)
 
 app.listen(3000, () => {
