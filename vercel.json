@@ -8,12 +8,12 @@
     ],
     "routes": [
         {
-            "src": "/api/data",
+            "src": "/api",
             "methods": [
                 "POST",
                 "GET"
             ],
-            "dest": "./routes/index.js"
+            "dest": "./index.js"
         }
     ],
     "public": true
