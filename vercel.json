@@ -13,7 +13,7 @@
                 "POST",
                 "GET"
             ],
-            "dest": "./index.js"
+            "dest": "./routes/index.js"
         }
     ],
     "public": true
