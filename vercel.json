@@ -13,7 +13,7 @@
                 "POST",
                 "GET"
             ],
-            "dest": "./controller/data.controller.js"
+            "dest": "./index.js"
         }
     ],
     "public": true
