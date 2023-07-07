@@ -8,12 +8,12 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
-        },
-        {
             "src": "/home",
-            "dest": "./index.js"
+            "methods": [
+                "POST",
+                "GET"
+            ],
+            "dest": "./controller/data.controller.js"
         }
     ],
     "public": true
