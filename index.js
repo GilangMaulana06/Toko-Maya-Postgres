@@ -19,7 +19,7 @@ app.use('/api', async (req, res) => {
         )
         res.json(data.rows).status(200)
     } catch (err) {
-        res.status(400).json({message: 'INI ERROR'})
+        res.status(400).json({message: err.message})
     }
 })
 
