@@ -2,14 +2,15 @@ const pool = require('../database')
 
 const getData = async (req, res) => {
     console.log('GET DATA')
-    try {
-        const data = await pool.query(
-            `SELECT * FROM data`
-        )
-        res.json(data.rows).status(200)
-    } catch (err) {
-        res.status(400).send(err.message)
-    }
+    // try {
+    //     const data = await pool.query(
+    //         `SELECT * FROM data`
+    //     )
+    //     res.json(data.rows).status(200)
+    // } catch (err) {
+    //     res.status(400).send(err.message)
+    // }
+    res.json({message: 'INI PESAN'})
 }
 
 const insertData = async (req, res) => {
