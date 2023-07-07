@@ -12,14 +12,14 @@ app.use(bodyParser.json())
 // })
 
 // app.use('/api', routes)
-app.use('/api', (req, res) => {
-    if(req.method === 'GET'){
-        res.json([
-            {nama : 'Gilang', umur : '25'},
-            {nama : 'haikal', umur : '15'},
-        ])
-    } else {
-        res.send({message: 'INI POST'})
+app.use('/api', async (req, res) => {
+    try {
+        const data = await pool.query(
+            `SELECT * FROM data`
+        )
+        res.json(data.rows).status(200)
+    } catch (err) {
+        res.status(400).json({message: 'INI ERROR'})
     }
 })
 
